@@ -1,0 +1,79 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    base64 (0.2.0)
+    bigdecimal (3.1.9)
+    ffi (1.17.1-arm64-darwin)
+    ffi (1.17.1-x86_64-darwin)
+    karafka (2.4.16)
+      base64 (~> 0.2)
+      karafka-core (>= 2.4.4, < 2.5.0)
+      karafka-rdkafka (>= 0.17.2)
+      waterdrop (>= 2.7.3, < 3.0.0)
+      zeitwerk (~> 2.3)
+    karafka-core (2.4.8)
+      karafka-rdkafka (>= 0.17.6, < 0.19.0)
+      logger (>= 1.6.0)
+    karafka-rdkafka (0.18.1)
+      ffi (~> 1.15)
+      mini_portile2 (~> 2.6)
+      rake (> 12)
+    logger (1.6.5)
+    mini_portile2 (2.8.8)
+    multi_json (1.15.0)
+    mustermann (3.0.3)
+      ruby2_keywords (~> 0.0.1)
+    rack (3.1.8)
+    rack-protection (4.1.1)
+      base64 (>= 0.1.0)
+      logger (>= 1.6.0)
+      rack (>= 3.0.0, < 4)
+    rack-session (2.1.0)
+      base64 (>= 0.1.0)
+      rack (>= 3.0.0)
+    rackup (2.2.1)
+      rack (>= 3)
+    rake (13.2.1)
+    ruby2_keywords (0.0.5)
+    sequel (5.88.0)
+      bigdecimal
+    sinatra (4.1.1)
+      logger (>= 1.6.0)
+      mustermann (~> 3.0)
+      rack (>= 3.0.0, < 4)
+      rack-protection (= 4.1.1)
+      rack-session (>= 2.0.0, < 3)
+      tilt (~> 2.0)
+    sinatra-contrib (4.1.1)
+      multi_json (>= 0.0.2)
+      mustermann (~> 3.0)
+      rack-protection (= 4.1.1)
+      sinatra (= 4.1.1)
+      tilt (~> 2.0)
+    sqlite3 (2.5.0-arm64-darwin)
+    sqlite3 (2.5.0-x86_64-darwin)
+    tilt (2.6.0)
+    waterdrop (2.8.1)
+      karafka-core (>= 2.4.3, < 3.0.0)
+      karafka-rdkafka (>= 0.17.5)
+      zeitwerk (~> 2.3)
+    webrick (1.9.1)
+    zeitwerk (2.6.18)
+
+PLATFORMS
+  arm64-darwin
+  x86_64-darwin
+
+DEPENDENCIES
+  karafka
+  rackup
+  rake
+  sequel
+  sinatra
+  sinatra-contrib
+  sqlite3
+  waterdrop
+  webrick
+
+BUNDLED WITH
+   2.5.9

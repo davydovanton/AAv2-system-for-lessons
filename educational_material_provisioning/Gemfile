@@ -1,0 +1,19 @@
+source 'https://rubygems.org'
+
+# ruby '3.4.1'
+
+gem 'rake'
+
+# http api
+gem 'rackup'
+gem 'webrick'
+gem 'sinatra'
+gem 'sinatra-contrib'
+
+# kafka
+gem 'karafka'
+gem 'waterdrop'
+
+# db
+gem 'sequel'
+gem 'sqlite3'

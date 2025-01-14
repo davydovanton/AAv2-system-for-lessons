@@ -1,0 +1,259 @@
+I, [2025-01-14T23:53:33.764381 #13594]  INFO -- : 
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+I, [2025-01-14T23:53:33.764517 #13594]  INFO -- : [0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+I, [2025-01-14T23:53:33.838157 #13594]  INFO -- : Running in ruby 3.1.0p0 (2021-12-25 revision fb4df44d16) [x86_64-darwin21]
+I, [2025-01-14T23:53:33.838250 #13594]  INFO -- : Running Karafka 2.4.16 server
+I, [2025-01-14T23:53:33.838288 #13594]  INFO -- : See LICENSE and the LGPL-3.0 for licensing details
+I, [2025-01-14T23:53:34.097676 #13594]  INFO -- : [67d7ed996078] Polled 1 messages in 131.46ms
+I, [2025-01-14T23:53:34.098654 #13594]  INFO -- : [d588ad1fcab0] Consume job for App::Transports::KafkaConsumers::BaseConsumer on my-topic/0 started
+E, [2025-01-14T23:53:34.099366 #13594] ERROR -- : Consumer consuming error: 859: unexpected token at 'my message'
+E, [2025-01-14T23:53:34.099429 #13594] ERROR -- : /Users/anton/.rvm/rubies/ruby-3.1.0/lib/ruby/3.1.0/json/common.rb:216:in `parse'
+/Users/anton/.rvm/rubies/ruby-3.1.0/lib/ruby/3.1.0/json/common.rb:216:in `parse'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/deserializers/payload.rb:12:in `call'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/messages/parser.rb:10:in `call'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/messages/message.rb:58:in `deserialize'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/messages/message.rb:36:in `payload'
+/Users/anton/work/job/async-course/aa_v2_version_system_for_lessons/bonuses_and_fees/app/transports/kafka_consumers.rb:9:in `block in consume'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/messages/messages.rb:22:in `each'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/messages/messages.rb:22:in `each'
+/Users/anton/work/job/async-course/aa_v2_version_system_for_lessons/bonuses_and_fees/app/transports/kafka_consumers.rb:8:in `consume'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/processing/strategies/default.rb:133:in `block in handle_consume'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-core-2.4.8/lib/karafka/core/monitoring/notifications.rb:117:in `instrument'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-core-2.4.8/lib/karafka/core/monitoring/monitor.rb:34:in `instrument'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/processing/strategies/default.rb:132:in `handle_consume'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/base_consumer.rb:106:in `on_consume'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/processing/executor.rb:94:in `consume'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/processing/jobs/consume.rb:37:in `call'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/processing/worker.rb:70:in `block (2 levels) in process'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-core-2.4.8/lib/karafka/core/monitoring/notifications.rb:120:in `instrument'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-core-2.4.8/lib/karafka/core/monitoring/monitor.rb:34:in `instrument'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/processing/worker.rb:60:in `block in process'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/base_consumer.rb:263:in `wrap'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/processing/strategies/default.rb:125:in `block in handle_wrap'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-core-2.4.8/lib/karafka/core/monitoring/notifications.rb:117:in `instrument'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-core-2.4.8/lib/karafka/core/monitoring/monitor.rb:34:in `instrument'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/processing/strategies/default.rb:124:in `handle_wrap'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/base_consumer.rb:86:in `on_wrap'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/processing/executor.rb:88:in `wrap'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/processing/jobs/base.rb:36:in `wrap'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/processing/worker.rb:57:in `process'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/processing/worker.rb:42:in `block in call'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/processing/worker.rb:42:in `loop'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/processing/worker.rb:42:in `call'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/helpers/async.rb:49:in `block (2 levels) in async_call'
+I, [2025-01-14T23:53:34.100187 #13594]  INFO -- : [c33ddd0a8cd3] Pausing on topic my-topic/0 on offset 0
+I, [2025-01-14T23:53:34.100693 #13594]  INFO -- : [f7ffe0064cdb] Retrying of App::Transports::KafkaConsumers::BaseConsumer after 2000 ms on topic my-topic/0 from offset 0
+I, [2025-01-14T23:53:34.100793 #13594]  INFO -- : [d588ad1fcab0] Consume job for App::Transports::KafkaConsumers::BaseConsumer on my-topic/0 finished in 1.97 ms
+I, [2025-01-14T23:53:36.116768 #13594]  INFO -- : [c33ddd0a8cd3] Resuming on topic my-topic/0
+I, [2025-01-14T23:53:37.120581 #13594]  INFO -- : [67d7ed996078] Polled 6 messages in 1002.55ms
+I, [2025-01-14T23:53:37.121446 #13594]  INFO -- : [d588ad1fcab0] Consume job for App::Transports::KafkaConsumers::BaseConsumer on my-topic/0 started
+E, [2025-01-14T23:53:37.122291 #13594] ERROR -- : Consumer consuming error: 859: unexpected token at 'my message'
+E, [2025-01-14T23:53:37.122425 #13594] ERROR -- : /Users/anton/.rvm/rubies/ruby-3.1.0/lib/ruby/3.1.0/json/common.rb:216:in `parse'
+/Users/anton/.rvm/rubies/ruby-3.1.0/lib/ruby/3.1.0/json/common.rb:216:in `parse'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/deserializers/payload.rb:12:in `call'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/messages/parser.rb:10:in `call'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/messages/message.rb:58:in `deserialize'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/messages/message.rb:36:in `payload'
+/Users/anton/work/job/async-course/aa_v2_version_system_for_lessons/bonuses_and_fees/app/transports/kafka_consumers.rb:9:in `block in consume'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/messages/messages.rb:22:in `each'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/messages/messages.rb:22:in `each'
+/Users/anton/work/job/async-course/aa_v2_version_system_for_lessons/bonuses_and_fees/app/transports/kafka_consumers.rb:8:in `consume'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/processing/strategies/default.rb:133:in `block in handle_consume'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-core-2.4.8/lib/karafka/core/monitoring/notifications.rb:117:in `instrument'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-core-2.4.8/lib/karafka/core/monitoring/monitor.rb:34:in `instrument'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/processing/strategies/default.rb:132:in `handle_consume'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/base_consumer.rb:106:in `on_consume'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/processing/executor.rb:94:in `consume'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/processing/jobs/consume.rb:37:in `call'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/processing/worker.rb:70:in `block (2 levels) in process'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-core-2.4.8/lib/karafka/core/monitoring/notifications.rb:120:in `instrument'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-core-2.4.8/lib/karafka/core/monitoring/monitor.rb:34:in `instrument'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/processing/worker.rb:60:in `block in process'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/base_consumer.rb:263:in `wrap'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/processing/strategies/default.rb:125:in `block in handle_wrap'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-core-2.4.8/lib/karafka/core/monitoring/notifications.rb:117:in `instrument'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-core-2.4.8/lib/karafka/core/monitoring/monitor.rb:34:in `instrument'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/processing/strategies/default.rb:124:in `handle_wrap'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/base_consumer.rb:86:in `on_wrap'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/processing/executor.rb:88:in `wrap'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/processing/jobs/base.rb:36:in `wrap'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/processing/worker.rb:57:in `process'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/processing/worker.rb:42:in `block in call'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/processing/worker.rb:42:in `loop'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/processing/worker.rb:42:in `call'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/helpers/async.rb:49:in `block (2 levels) in async_call'
+I, [2025-01-14T23:53:37.123884 #13594]  INFO -- : [c33ddd0a8cd3] Pausing on topic my-topic/0 on offset 0
+I, [2025-01-14T23:53:37.124436 #13594]  INFO -- : [f7ffe0064cdb] Retrying of App::Transports::KafkaConsumers::BaseConsumer after 4000 ms on topic my-topic/0 from offset 0
+I, [2025-01-14T23:53:37.124649 #13594]  INFO -- : [d588ad1fcab0] Consume job for App::Transports::KafkaConsumers::BaseConsumer on my-topic/0 finished in 2.94 ms
+I, [2025-01-14T23:53:41.155040 #13594]  INFO -- : [c33ddd0a8cd3] Resuming on topic my-topic/0
+I, [2025-01-14T23:53:42.161024 #13594]  INFO -- : [67d7ed996078] Polled 6 messages in 1005.36ms
+I, [2025-01-14T23:53:42.162105 #13594]  INFO -- : [d588ad1fcab0] Consume job for App::Transports::KafkaConsumers::BaseConsumer on my-topic/0 started
+E, [2025-01-14T23:53:42.163175 #13594] ERROR -- : Consumer consuming error: 859: unexpected token at 'my message'
+E, [2025-01-14T23:53:42.163297 #13594] ERROR -- : /Users/anton/.rvm/rubies/ruby-3.1.0/lib/ruby/3.1.0/json/common.rb:216:in `parse'
+/Users/anton/.rvm/rubies/ruby-3.1.0/lib/ruby/3.1.0/json/common.rb:216:in `parse'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/deserializers/payload.rb:12:in `call'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/messages/parser.rb:10:in `call'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/messages/message.rb:58:in `deserialize'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/messages/message.rb:36:in `payload'
+/Users/anton/work/job/async-course/aa_v2_version_system_for_lessons/bonuses_and_fees/app/transports/kafka_consumers.rb:9:in `block in consume'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/messages/messages.rb:22:in `each'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/messages/messages.rb:22:in `each'
+/Users/anton/work/job/async-course/aa_v2_version_system_for_lessons/bonuses_and_fees/app/transports/kafka_consumers.rb:8:in `consume'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/processing/strategies/default.rb:133:in `block in handle_consume'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-core-2.4.8/lib/karafka/core/monitoring/notifications.rb:117:in `instrument'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-core-2.4.8/lib/karafka/core/monitoring/monitor.rb:34:in `instrument'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/processing/strategies/default.rb:132:in `handle_consume'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/base_consumer.rb:106:in `on_consume'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/processing/executor.rb:94:in `consume'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/processing/jobs/consume.rb:37:in `call'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/processing/worker.rb:70:in `block (2 levels) in process'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-core-2.4.8/lib/karafka/core/monitoring/notifications.rb:120:in `instrument'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-core-2.4.8/lib/karafka/core/monitoring/monitor.rb:34:in `instrument'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/processing/worker.rb:60:in `block in process'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/base_consumer.rb:263:in `wrap'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/processing/strategies/default.rb:125:in `block in handle_wrap'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-core-2.4.8/lib/karafka/core/monitoring/notifications.rb:117:in `instrument'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-core-2.4.8/lib/karafka/core/monitoring/monitor.rb:34:in `instrument'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/processing/strategies/default.rb:124:in `handle_wrap'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/base_consumer.rb:86:in `on_wrap'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/processing/executor.rb:88:in `wrap'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/processing/jobs/base.rb:36:in `wrap'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/processing/worker.rb:57:in `process'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/processing/worker.rb:42:in `block in call'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/processing/worker.rb:42:in `loop'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/processing/worker.rb:42:in `call'
+/Users/anton/.rvm/gems/ruby-3.1.0/gems/karafka-2.4.16/lib/karafka/helpers/async.rb:49:in `block (2 levels) in async_call'
+I, [2025-01-14T23:53:43.180529 #13594]  INFO -- : [c33ddd0a8cd3] Pausing on topic my-topic/0 on offset 0
+I, [2025-01-14T23:53:43.181196 #13594]  INFO -- : [f7ffe0064cdb] Retrying of App::Transports::KafkaConsumers::BaseConsumer after 8000 ms on topic my-topic/0 from offset 0
+I, [2025-01-14T23:53:43.181356 #13594]  INFO -- : [d588ad1fcab0] Consume job for App::Transports::KafkaConsumers::BaseConsumer on my-topic/0 finished in 1018.94 ms
+I, [2025-01-14T23:53:44.449970 #13594]  INFO -- : Received SIGINT system signal
+I, [2025-01-14T23:53:44.450572 #13594]  INFO -- : Stopping Karafka server
+I, [2025-01-14T23:53:45.200487 #13594]  INFO -- : [d588ad1fcab0] Shutdown job for App::Transports::KafkaConsumers::BaseConsumer on my-topic/0 started
+I, [2025-01-14T23:53:45.200662 #13594]  INFO -- : [d588ad1fcab0] Shutdown job for App::Transports::KafkaConsumers::BaseConsumer on my-topic/0 finished in 0.04 ms
+I, [2025-01-14T23:53:46.649224 #13594]  INFO -- : Stopped Karafka server
+I, [2025-01-14T23:53:46.649502 #13594]  INFO -- : [waterdrop-4dcee8dbda2c] Closing producer
+I, [2025-01-14T23:53:46.649678 #13594]  INFO -- : [waterdrop-4dcee8dbda2c] Closing producer took 0.18 ms
+I, [2025-01-14T23:58:36.801696 #14979]  INFO -- : 
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+I, [2025-01-14T23:58:36.801831 #14979]  INFO -- : [0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+I, [2025-01-14T23:58:36.874555 #14979]  INFO -- : Running in ruby 3.1.0p0 (2021-12-25 revision fb4df44d16) [x86_64-darwin21]
+I, [2025-01-14T23:58:36.874662 #14979]  INFO -- : Running Karafka 2.4.16 server
+I, [2025-01-14T23:58:36.874702 #14979]  INFO -- : See LICENSE and the LGPL-3.0 for licensing details
+I, [2025-01-14T23:58:37.119770 #14979]  INFO -- : [04e313c7032e] Polled 1 messages in 119.97ms
+I, [2025-01-14T23:58:37.121448 #14979]  INFO -- : [4b6713fd22c6] Consume job for App::Transports::KafkaConsumers::BaseConsumer on my-topic/0 started
+I, [2025-01-14T23:58:37.122278 #14979]  INFO -- : [4b6713fd22c6] Consume job for App::Transports::KafkaConsumers::BaseConsumer on my-topic/0 finished in 0.6 ms
+I, [2025-01-14T23:58:38.130237 #14979]  INFO -- : [04e313c7032e] Polled 5 messages in 1007.42ms
+I, [2025-01-14T23:58:38.132489 #14979]  INFO -- : [4b6713fd22c6] Consume job for App::Transports::KafkaConsumers::BaseConsumer on my-topic/0 started
+I, [2025-01-14T23:58:38.133696 #14979]  INFO -- : [4b6713fd22c6] Consume job for App::Transports::KafkaConsumers::BaseConsumer on my-topic/0 finished in 0.78 ms
+I, [2025-01-14T23:58:41.248360 #14979]  INFO -- : Received SIGINT system signal
+I, [2025-01-14T23:58:41.249082 #14979]  INFO -- : Stopping Karafka server
+I, [2025-01-14T23:58:42.160596 #14979]  INFO -- : [4b6713fd22c6] Shutdown job for App::Transports::KafkaConsumers::BaseConsumer on my-topic/0 started
+I, [2025-01-14T23:58:42.160780 #14979]  INFO -- : [4b6713fd22c6] Shutdown job for App::Transports::KafkaConsumers::BaseConsumer on my-topic/0 finished in 0.05 ms
+I, [2025-01-14T23:58:43.553982 #14979]  INFO -- : Stopped Karafka server
+I, [2025-01-14T23:58:43.554218 #14979]  INFO -- : [waterdrop-9c1e49235af6] Closing producer
+I, [2025-01-14T23:58:43.554357 #14979]  INFO -- : [waterdrop-9c1e49235af6] Closing producer took 0.15 ms
+I, [2025-01-15T00:00:52.934125 #16215]  INFO -- : 
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+I, [2025-01-15T00:00:52.934269 #16215]  INFO -- : [0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+I, [2025-01-15T00:00:52.999998 #16215]  INFO -- : Running in ruby 3.1.0p0 (2021-12-25 revision fb4df44d16) [x86_64-darwin21]
+I, [2025-01-15T00:00:53.000090 #16215]  INFO -- : Running Karafka 2.4.16 server
+I, [2025-01-15T00:00:53.000129 #16215]  INFO -- : See LICENSE and the LGPL-3.0 for licensing details
+I, [2025-01-15T00:01:13.239773 #16215]  INFO -- : [27d604dd6c3a] Polled 1 messages in 1007.09ms
+I, [2025-01-15T00:01:13.244320 #16215]  INFO -- : [d8ff394b565d] Consume job for App::Transports::KafkaConsumers::BaseConsumer on my-topic/0 started
+I, [2025-01-15T00:01:13.255610 #16215]  INFO -- : [d8ff394b565d] Consume job for App::Transports::KafkaConsumers::BaseConsumer on my-topic/0 finished in 1.6 ms
+I, [2025-01-15T00:01:15.259528 #16215]  INFO -- : [27d604dd6c3a] Polled 1 messages in 999.88ms
+I, [2025-01-15T00:01:15.260035 #16215]  INFO -- : [d8ff394b565d] Consume job for App::Transports::KafkaConsumers::BaseConsumer on my-topic/0 started
+I, [2025-01-15T00:01:15.260659 #16215]  INFO -- : [d8ff394b565d] Consume job for App::Transports::KafkaConsumers::BaseConsumer on my-topic/0 finished in 0.34 ms
+I, [2025-01-15T00:01:17.271842 #16215]  INFO -- : [27d604dd6c3a] Polled 2 messages in 1004.9ms
+I, [2025-01-15T00:01:17.272349 #16215]  INFO -- : [d8ff394b565d] Consume job for App::Transports::KafkaConsumers::BaseConsumer on my-topic/0 started
+I, [2025-01-15T00:01:17.272831 #16215]  INFO -- : [d8ff394b565d] Consume job for App::Transports::KafkaConsumers::BaseConsumer on my-topic/0 finished in 0.33 ms
+I, [2025-01-15T00:01:18.277981 #16215]  INFO -- : [27d604dd6c3a] Polled 1 messages in 1004.76ms
+I, [2025-01-15T00:01:18.278972 #16215]  INFO -- : [d8ff394b565d] Consume job for App::Transports::KafkaConsumers::BaseConsumer on my-topic/0 started
+I, [2025-01-15T00:01:18.285647 #16215]  INFO -- : [d8ff394b565d] Consume job for App::Transports::KafkaConsumers::BaseConsumer on my-topic/0 finished in 0.35 ms
+I, [2025-01-15T00:01:25.451531 #16215]  INFO -- : Received SIGINT system signal
+I, [2025-01-15T00:01:25.452008 #16215]  INFO -- : Stopping Karafka server
+I, [2025-01-15T00:01:26.333293 #16215]  INFO -- : [d8ff394b565d] Shutdown job for App::Transports::KafkaConsumers::BaseConsumer on my-topic/0 started
+I, [2025-01-15T00:01:26.333465 #16215]  INFO -- : [d8ff394b565d] Shutdown job for App::Transports::KafkaConsumers::BaseConsumer on my-topic/0 finished in 0.04 ms
+I, [2025-01-15T00:01:27.759863 #16215]  INFO -- : Stopped Karafka server
+I, [2025-01-15T00:01:27.760334 #16215]  INFO -- : [waterdrop-55b7612ab9e5] Closing producer
+I, [2025-01-15T00:01:27.760579 #16215]  INFO -- : [waterdrop-55b7612ab9e5] Closing producer took 0.25 ms
+I, [2025-01-15T00:13:07.421288 #18716]  INFO -- : 
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+I, [2025-01-15T00:13:07.421429 #18716]  INFO -- : [0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+I, [2025-01-15T00:13:07.506831 #18716]  INFO -- : Running in ruby 3.1.0p0 (2021-12-25 revision fb4df44d16) [x86_64-darwin21]
+I, [2025-01-15T00:13:07.506917 #18716]  INFO -- : Running Karafka 2.4.16 server
+I, [2025-01-15T00:13:07.506955 #18716]  INFO -- : See LICENSE and the LGPL-3.0 for licensing details
+I, [2025-01-15T00:13:07.646041 #18716]  INFO -- : [ff812d555da8] Polled 1 messages in 17.79ms
+I, [2025-01-15T00:13:07.646957 #18716]  INFO -- : [544e6f905553] Consume job for App::Transports::KafkaConsumers::BaseConsumer on my-topic/0 started
+I, [2025-01-15T00:13:07.648077 #18716]  INFO -- : [544e6f905553] Consume job for App::Transports::KafkaConsumers::BaseConsumer on my-topic/0 finished in 0.95 ms
+I, [2025-01-15T00:13:08.653235 #18716]  INFO -- : [ff812d555da8] Polled 2 messages in 1004.8ms
+I, [2025-01-15T00:13:08.654223 #18716]  INFO -- : [544e6f905553] Consume job for App::Transports::KafkaConsumers::BaseConsumer on my-topic/0 started
+I, [2025-01-15T00:13:08.656379 #18716]  INFO -- : [544e6f905553] Consume job for App::Transports::KafkaConsumers::BaseConsumer on my-topic/0 finished in 1.81 ms
+I, [2025-01-15T00:14:06.879184 #18716]  INFO -- : Received SIGINT system signal
+I, [2025-01-15T00:14:06.879682 #18716]  INFO -- : Stopping Karafka server
+I, [2025-01-15T00:14:07.044036 #18716]  INFO -- : [544e6f905553] Shutdown job for App::Transports::KafkaConsumers::BaseConsumer on my-topic/0 started
+I, [2025-01-15T00:14:07.044283 #18716]  INFO -- : [544e6f905553] Shutdown job for App::Transports::KafkaConsumers::BaseConsumer on my-topic/0 finished in 0.06 ms
+I, [2025-01-15T00:14:08.344391 #18716]  INFO -- : Stopped Karafka server
+I, [2025-01-15T00:14:08.344577 #18716]  INFO -- : [waterdrop-dd513ee59de8] Closing producer
+I, [2025-01-15T00:14:08.344772 #18716]  INFO -- : [waterdrop-dd513ee59de8] Closing producer took 0.17 ms
+I, [2025-01-15T00:14:14.778567 #19118]  INFO -- : 
+@@@                                             @@@@@  @@@
+@@@                                            @@@     @@@
+@@@  @@@    @@@@@@@@@   @@@ @@@   @@@@@@@@@  @@@@@@@@  @@@  @@@@   @@@@@@@@@
+@@@@@@     @@@    @@@   @@@@@    @@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@@@@@    @@@    @@@   @@@     @@@@    @@@    @@@     @@@@@@@    @@@    @@@
+@@@  @@@@  @@@@@@@@@@   @@@      @@@@@@@@@@    @@@     @@@  @@@@   @@@@@@@@@@
+
+
+I, [2025-01-15T00:14:14.778719 #19118]  INFO -- : [0;31mUpgrade to Karafka Pro for more features and support: https://karafka.io[0m
+I, [2025-01-15T00:14:14.868937 #19118]  INFO -- : Running in ruby 3.1.0p0 (2021-12-25 revision fb4df44d16) [x86_64-darwin21]
+I, [2025-01-15T00:14:14.869032 #19118]  INFO -- : Running Karafka 2.4.16 server
+I, [2025-01-15T00:14:14.869072 #19118]  INFO -- : See LICENSE and the LGPL-3.0 for licensing details
+I, [2025-01-15T00:14:20.024983 #19118]  INFO -- : [fc0289adf002] Polled 1 messages in 1003.84ms
+I, [2025-01-15T00:14:20.026487 #19118]  INFO -- : [06c0290ef3d3] Consume job for App::Transports::KafkaConsumers::BaseConsumer on my-topic/0 started
+I, [2025-01-15T00:14:20.030932 #19118]  INFO -- : [06c0290ef3d3] Consume job for App::Transports::KafkaConsumers::BaseConsumer on my-topic/0 finished in 0.74 ms
+I, [2025-01-15T00:14:31.105310 #19118]  INFO -- : [fc0289adf002] Polled 1 messages in 1017.6ms
+I, [2025-01-15T00:14:31.105909 #19118]  INFO -- : [06c0290ef3d3] Consume job for App::Transports::KafkaConsumers::BaseConsumer on my-topic/0 started
+I, [2025-01-15T00:14:31.106462 #19118]  INFO -- : [06c0290ef3d3] Consume job for App::Transports::KafkaConsumers::BaseConsumer on my-topic/0 finished in 0.37 ms
+I, [2025-01-15T00:15:17.474612 #19118]  INFO -- : [fc0289adf002] Polled 1 messages in 1005.44ms
+I, [2025-01-15T00:15:17.475280 #19118]  INFO -- : [06c0290ef3d3] Consume job for App::Transports::KafkaConsumers::BaseConsumer on my-topic/0 started
+I, [2025-01-15T00:15:17.475815 #19118]  INFO -- : [06c0290ef3d3] Consume job for App::Transports::KafkaConsumers::BaseConsumer on my-topic/0 finished in 0.41 ms
+I, [2025-01-15T00:15:34.401162 #19118]  INFO -- : Received SIGINT system signal
+I, [2025-01-15T00:15:34.401759 #19118]  INFO -- : Stopping Karafka server
+I, [2025-01-15T00:15:34.585296 #19118]  INFO -- : [06c0290ef3d3] Shutdown job for App::Transports::KafkaConsumers::BaseConsumer on my-topic/0 started
+I, [2025-01-15T00:15:34.585621 #19118]  INFO -- : [06c0290ef3d3] Shutdown job for App::Transports::KafkaConsumers::BaseConsumer on my-topic/0 finished in 0.06 ms
+I, [2025-01-15T00:15:42.883703 #19118]  INFO -- : Received SIGINT system signal
+I, [2025-01-15T00:15:44.915006 #19118]  INFO -- : Received SIGINT system signal
+I, [2025-01-15T00:15:45.369085 #19118]  INFO -- : Received SIGINT system signal
+I, [2025-01-15T00:15:45.542884 #19118]  INFO -- : Received SIGINT system signal
+I, [2025-01-15T00:16:00.575641 #19118]  INFO -- : Stopped Karafka server
+I, [2025-01-15T00:16:00.575877 #19118]  INFO -- : [waterdrop-6a7d2193f99c] Closing producer
+I, [2025-01-15T00:16:00.575996 #19118]  INFO -- : [waterdrop-6a7d2193f99c] Closing producer took 0.13 ms

@@ -17,3 +17,6 @@ gem 'waterdrop'
 # db
 gem 'sequel'
 gem 'sqlite3'
+
+# http client
+gem 'faraday'

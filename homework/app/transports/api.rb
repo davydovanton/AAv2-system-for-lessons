@@ -27,7 +27,7 @@ module App
         'TODO'
       end
 
-      post 'teachers/api/homeworks/:id/reviewed' do
+      post 'teachers/api/homeworks/:id/review' do
         'TODO'
 
         # produce event CalculateBonuseEvent to 'bonuses_and_fees_service.calculate_bonuse'

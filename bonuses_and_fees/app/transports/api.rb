@@ -14,7 +14,6 @@ module App
 
       get 'teachers/api/balance' do
         'TODO'
-        # call educational_material_provisioning POST 'api/lessons'
       end
 
       # для интеграции

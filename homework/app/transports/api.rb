@@ -33,7 +33,7 @@ module App
       post 'teachers/api/homeworks/:id/review' do
         'TODO'
 
-        # produce event HomeworkStatusChangedEvent to 'bonuses_and_fees_service.homework_reviewed'
+        # produce event HomeworkStatusChangedEvent to 'bonuses_and_fees_service.calculate_bonuse'
       end
 
       # для интеграции

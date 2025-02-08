@@ -1,6 +1,6 @@
 module App
   module Commands
-    class CalculateBonuse
+    class PayToTeacher
       def call(payload)
         # TODO
       end

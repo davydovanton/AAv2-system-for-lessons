@@ -17,13 +17,26 @@ module App
       class CalculateBonuse < Karafka::BaseConsumer
         def consume
           messages.each do |message|
+            # TODO
             #
           end
 
         end
       end
 
-      # topic 'bonuses_and_fees_service.calculate_bonuse_from_completed_lessons'
+      # topic 'bonuses_and_fees_service.calculate_bonuse'
+      class HomeworkReviewed < Karafka::BaseConsumer
+        def consume
+          messages.each do |message|
+            # TODO
+
+          end
+
+        end
+      end
+
+
+      # topic 'bonuses_and_fees_service.calculate_bonuse'
       class CalculateBonuseFromCompletedLessons < Karafka::BaseConsumer
         def consume
           messages.each do |message|
@@ -39,6 +52,15 @@ module App
           messages.each do |message|
             #
             # request lesson_development service GET 'api/teachers'
+          end
+        end
+      end
+
+      # topic 'bonuses_and_fees_service.pay_to_teacher'
+      class PayToTeaches < Karafka::BaseConsumer
+        def consume
+          messages.each do |message|
+            #
           end
         end
       end

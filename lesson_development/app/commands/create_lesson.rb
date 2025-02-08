@@ -1,6 +1,6 @@
 module App
   module Commands
-    class AddLesson
+    class CreateLesson
       def call(payload)
         # TODO
       end

@@ -15,6 +15,10 @@ module App
       
       post '/api/student' do
         'TODO'
+
+        # провалидировать данные об ученике
+        # создать запись в learners таблице
+
         # request homework service POST '/api/students'
         #
       end
@@ -27,13 +31,15 @@ module App
         'TODO'
       end
 
-      post '/api/lesson/readed' do
+      # change to read
+      post '/api/lesson/change_status' do
         'TODO'
         # produce event ChangeLessonStatus to 'homeworks.change_lesson_status'
       end
 
       # для интеграции
       get 'api/lessons_status_changed' do
+        # просто all_lessons отдавать
         'TODO'
       end
 

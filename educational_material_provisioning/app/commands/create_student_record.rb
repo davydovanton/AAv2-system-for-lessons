@@ -1,10 +1,9 @@
 module App
   module Commands
-    class CompleteLesson
+    class CreateStudentRecord
       def call(payload)
         # TODO
       end
     end
   end
 end
-

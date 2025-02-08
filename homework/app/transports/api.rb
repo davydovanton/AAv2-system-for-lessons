@@ -12,6 +12,9 @@ module App
         result.inspect
       end
 
+      post 'studens/api/homeworks/' do
+        'TODO'
+      end
 
       get 'studens/api/homeworks/:lesson_id' do
         'TODO'
@@ -20,7 +23,7 @@ module App
       post 'studens/api/homeworks/:lesson_id/completed' do
         'TODO'
 
-        # produce event CalculateBonuseEvent to 'bonuses_and_fees_service.calculate_bonuse'
+        # produce event ChangeTeacherBalanceEvent to 'bonuses_and_fees_service.calculate_bonuse'
       end
 
       get 'teachers/api/homeworks_for_review' do
@@ -30,7 +33,7 @@ module App
       post 'teachers/api/homeworks/:id/review' do
         'TODO'
 
-        # produce event CalculateBonuseEvent to 'bonuses_and_fees_service.calculate_bonuse'
+        # produce event HomeworkStatusChangedEvent to 'bonuses_and_fees_service.homework_reviewed'
       end
 
       # для интеграции

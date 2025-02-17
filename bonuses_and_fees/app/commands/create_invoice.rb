@@ -1,10 +1,10 @@
 module App
   module Commands
-    class PayToTeacher
+    class CreateInvoice
       def call(payload)
         # TODO
         #
-        # if balance > 0
+        # call PayToTeacher
       end
     end
   end

@@ -13,34 +13,19 @@ module App
         end
       end
 
+      # все три консьюмера засунуть в одиин
+
       # topic 'bonuses_and_fees_service.calculate_bonuse'
       class CalculateBonuse < Karafka::BaseConsumer
         def consume
           messages.each do |message|
             # TODO
             #
-          end
-
-        end
-      end
-
-      # topic 'bonuses_and_fees_service.calculate_bonuse'
-      class HomeworkReviewed < Karafka::BaseConsumer
-        def consume
-          messages.each do |message|
-            # TODO
-
-          end
-
-        end
-      end
-
-
-      # topic 'bonuses_and_fees_service.calculate_bonuse'
-      class CalculateBonuseFromCompletedLessons < Karafka::BaseConsumer
-        def consume
-          messages.each do |message|
-            # request educational_material_provisioning service GET 'api/lessons_status_changed'
+            # consume 3 different events in one place
+            #
+            # CalculateBonuseFromCreatedLessonsEvent
+            # ChangeTeacherBalanceEvent
+            # HomeworkStatusChangedEvent
           end
 
         end
@@ -60,7 +45,7 @@ module App
       class PayToTeaches < Karafka::BaseConsumer
         def consume
           messages.each do |message|
-            #
+            # call CreateInvoice command
           end
         end
       end
